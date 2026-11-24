@@ -14,15 +14,15 @@
   Juntao Jiang<sup>*1,2</sup> ·
   Wenqi Zhong<sup>*2,3,1</sup> ·
   <a href="https://gyguo.github.io/">Guangyu Guo</a><sup>*2,3,1</sup> ·
-  Dexia Chen<sup>2,3</sup> ·
-  Yilong Hu<sup>2,3</sup><br>
-  <a href="https://scholar.google.com/citations?user=5kJ22ZMAAAAJ">Yunhao Bai</a><sup>2,4</sup> ·
-  <a href="https://scholar.google.com/citations?user=yoY2un8AAAAJ">Zhenyu Yi</a><sup>5</sup> ·
+  Dexia Chen<sup>2</sup> ·
+  Yilong Hu<sup>2</sup> ·
+  <a href="https://scholar.google.com/citations?user=5kJ22ZMAAAAJ">Yunhao Bai</a><sup>2,4</sup><br>
+  <a href="https://scholar.google.com/citations?user=yoY2un8AAAAJ">Zhenyu Yi</a><sup>2,5</sup> ·
   <a href="https://scholar.google.com/citations?user=qirP1UIAAAAJ">Jianwei Xu</a><sup>2,3,1</sup> ·
-  <a href="https://cwmok.github.io/">Tony C. W. MOK</a><sup>2,3,1</sup> ·
-  Muxuan Gao<sup>1</sup><br>
+  <a href="https://cwmok.github.io/">Tony C. W. MOK</a><sup>2</sup> ·
+  Muxuan Gao<sup>1</sup> ·
   <a href="https://fabiozhang0722.github.io/">Ling Zhang</a><sup>2</sup> ·
-  <a href="https://april.zju.edu.cn/team/dr-yong-liu/">Yong Liu</a><sup>1</sup> ·
+  <a href="https://april.zju.edu.cn/team/dr-yong-liu/">Yong Liu</a><sup>1</sup><br>
   <a href="https://zhangzjn.github.io/">Jiangning Zhang</a><sup>†1</sup> ·
   <a href="https://ericzw.github.io/">Zhongwei Qiu</a><sup>†2,3,1</sup>
 </p>
@@ -50,8 +50,8 @@ evaluation and calibration code for CT-Verdict (IID + OOD).
 
 ## Updates
 
-- **[2026-11]** The CT-Verdict benchmark and the training and evaluation code are released.
-- **[2026-11]** Radev-0.8B and Radev-2B checkpoints are announced and will be released within one week.
+- **[2026-11-24]** The CT-Verdict benchmark and the training and evaluation code are released.
+- **[2026-11-24]** Radev-0.8B and Radev-2B checkpoints are announced and will be released as soon as possible after review.
 
 ![Radev framework](assets/framework.png)
 *Framework of Radev (paper Fig. 2). (a) Organ-grounded 3D encoder and query-conditioned 2D
