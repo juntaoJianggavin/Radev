@@ -254,7 +254,7 @@ loss weights) are documented in the launchers and `python -m radev train --help`
 
 | Asset | Env override | Notes |
 |---|---|---|
-| Language hosts (Qwen3.5 family) | `LLM_ROOT` | `pretrained/Qwen3.5-{0.8B,2B,9B}` |
+| Language hosts (Qwen3.5 family) | `LLM_ROOT` | `pretrained/Qwen3.5-{0.8B,2B}` |
 | Frozen 3D encoder + text embedding | `RADAR_CKPT_ROOT` | `checkpoint_radar_plus_finetuned.pth`, `infer_text_embedding.pt` |
 | Organ-feature / slice caches | `VISUAL_ROOT`, `SLICE_ROOT` | rebuild with `build_features.sh` |
 | CT volumes | `RADEV_IMAGE_ROOT` | see Data preparation |
@@ -275,14 +275,13 @@ Expected layout (defaults shown; override with the env vars above):
 <repo>/
 ├── pretrained/                      # LLM_ROOT
 │   ├── Qwen3.5-0.8B/                # HF-format model dir (config.json, weights, tokenizer)
-│   ├── Qwen3.5-2B/
-│   └── Qwen3.5-9B/
+│   └── Qwen3.5-2B/
 └── radar_ckpt/                      # RADAR_CKPT_ROOT
     ├── checkpoint_radar_plus_finetuned.pth   # frozen 3D encoder, identity radar_ft
     └── infer_text_embedding.pt               # organ text embedding
 ```
 
-**1. Language hosts (Qwen3.5 family).** Obtain the official Qwen3.5-{0.8B,2B,9B} base
+**1. Language hosts (Qwen3.5 family).** Obtain the official Qwen3.5-{0.8B,2B} base
 checkpoints from the Qwen organization on Hugging Face (<https://huggingface.co/Qwen>)
 and place each as a standard HF model directory under `LLM_ROOT` (default `pretrained/`).
 Download with the matching official repo id, e.g.:
@@ -290,7 +289,7 @@ Download with the matching official repo id, e.g.:
 ```bash
 pip install -U "huggingface_hub[cli]"
 huggingface-cli download <official-Qwen3.5-2B-repo-id> --local-dir pretrained/Qwen3.5-2B
-# repeat for 0.8B / 9B; or set LLM_ROOT to an existing model directory
+# repeat for 0.8B; or set LLM_ROOT to an existing model directory
 ```
 
 Only the sizes you actually run are required (the published arm uses 0.8B and 2B).
