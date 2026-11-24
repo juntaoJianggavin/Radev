@@ -8,6 +8,33 @@
     <a href="https://juntaojianggavin.github.io/projects/Radev"><img src='https://img.shields.io/badge/Radev-Website-green?style=flat&logo=googlechrome&logoColor=green' alt='Radev Website'></a>
 </p>
 
+<p align="center">
+  Juntao Jiang<sup>*1,2</sup> ·
+  Wenqi Zhong<sup>*2,3,1</sup> ·
+  <a href="https://gyguo.github.io/">Guangyu Guo</a><sup>*2,3,1</sup> ·
+  Dexia Chen<sup>2,3</sup> ·
+  Yilong Hu<sup>2,3</sup> ·
+  <a href="https://scholar.google.com/citations?user=5kJ22ZMAAAAJ">Yunhao Bai</a><sup>2,4</sup> ·
+  <a href="https://scholar.google.com/citations?user=yoY2un8AAAAJ">Zhenyu Yi</a><sup>5</sup> ·
+  <a href="https://scholar.google.com/citations?user=qirP1UIAAAAJ">Jianwei Xu</a><sup>2,3,1</sup> ·
+  <a href="https://cwmok.github.io/">Tony C. W. MOK</a><sup>2,3,1</sup> ·
+  Muxuan Gao<sup>1</sup> ·
+  <a href="https://fabiozhang0722.github.io/">Ling Zhang</a><sup>2</sup> ·
+  <a href="https://april.zju.edu.cn/team/dr-yong-liu/">Yong Liu</a><sup>1</sup> ·
+  <a href="https://zhangzjn.github.io/">Jiangning Zhang</a><sup>†1</sup> ·
+  <a href="https://ericzw.github.io/">Zhongwei Qiu</a><sup>†2,3,1</sup>
+</p>
+
+<p align="center">
+  <sup>1</sup>Zhejiang University ·
+  <sup>2</sup>DAMO Academy, Alibaba Group ·
+  <sup>3</sup>Hupan Lab ·
+  <sup>4</sup>East China Normal University ·
+  <sup>5</sup>Shanghai Jiao Tong University
+</p>
+
+<p align="center"><sub><sup>*</sup>Equal contribution · <sup>†</sup>Corresponding author</sub></p>
+
 Radev reads a whole 3D abdominal CT volume together with a clinical question and a small
 candidate set, and emits a **calibrated probability distribution over the candidates in a
 single forward pass** — no autoregressive decoding, no free-text generation. Anatomical
