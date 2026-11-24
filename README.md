@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/radev_title.png" alt="Radev: Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration" width="820">
+  <img src="assets/radev_title.png" alt="Radev: Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration" width="720">
 </p>
 
 <p align="center">
