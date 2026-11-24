@@ -1,8 +1,4 @@
-<p align="center">
-    <a href="">
-<img width="600" alt="Radev" src="assets/title.png">
-     </a>
-</p>
+# Radev: Decision-Native Multimodal Clinical Modeling for 3D CT
 
 <p align="center">
     <a href="#"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
