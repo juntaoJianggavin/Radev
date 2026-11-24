@@ -1,0 +1,242 @@
+question	group	organs
+finding_aortic_valve_calcification	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+finding_atelectasis	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+finding_cardiomegaly	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+finding_coronary_calcification	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+finding_pleural_effusion	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_acute_chronic_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_compartment_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_congenital_variant_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_diverticulum_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_extent_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_gas_pattern_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_hernia_site_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_macroscopic_fat_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_vascular_relation_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+newq_wall_change_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+organ_lower	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+score_aortic_valve_calcification	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+score_atelectasis	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+score_cardiomegaly	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+score_coronary_calcification	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+score_pleural_effusion	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+side_lower_atelectasis	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+side_lower_pleural_effusion	Lower thorax	心脏 肺 食管 肋骨 锁骨 胸椎 肺动脉
+finding_biliary_ductal_dilation	Liver and biliary tree	肝 门静脉
+finding_hepatic_steatosis	Liver and biliary tree	肝 门静脉
+finding_hepatomegaly	Liver and biliary tree	肝 门静脉
+finding_metastatic_disease	Liver and biliary tree	肝 门静脉
+newq_acute_chronic_liver	Liver and biliary tree	肝 门静脉
+newq_compartment_liver	Liver and biliary tree	肝 门静脉
+newq_congenital_variant_liver	Liver and biliary tree	肝 门静脉
+newq_diverticulum_liver	Liver and biliary tree	肝 门静脉
+newq_extent_liver	Liver and biliary tree	肝 门静脉
+newq_gas_pattern_liver	Liver and biliary tree	肝 门静脉
+newq_hernia_site_liver	Liver and biliary tree	肝 门静脉
+newq_macroscopic_fat_liver	Liver and biliary tree	肝 门静脉
+newq_vascular_relation_liver	Liver and biliary tree	肝 门静脉
+newq_wall_change_liver	Liver and biliary tree	肝 门静脉
+organ_liver	Liver and biliary tree	肝 门静脉
+score_biliary_ductal_dilation	Liver and biliary tree	肝 门静脉
+score_hepatic_steatosis	Liver and biliary tree	肝 门静脉
+score_hepatomegaly	Liver and biliary tree	肝 门静脉
+score_metastatic_disease	Liver and biliary tree	肝 门静脉
+side_liver_biliary_ductal_dilation	Liver and biliary tree	肝 门静脉
+side_liver_hepatic_steatosis	Liver and biliary tree	肝 门静脉
+side_liver_metastatic_disease	Liver and biliary tree	肝 门静脉
+finding_gallstones	Gallbladder	胆囊
+finding_surgically_absent_gallbladder	Gallbladder	胆囊
+newq_acute_chronic_gallbladder	Gallbladder	胆囊
+newq_compartment_gallbladder	Gallbladder	胆囊
+newq_diverticulum_gallbladder	Gallbladder	胆囊
+newq_extent_gallbladder	Gallbladder	胆囊
+newq_gas_pattern_gallbladder	Gallbladder	胆囊
+newq_hernia_site_gallbladder	Gallbladder	胆囊
+newq_vascular_relation_gallbladder	Gallbladder	胆囊
+newq_wall_change_gallbladder	Gallbladder	胆囊
+organ_gallbladder	Gallbladder	胆囊
+score_gallstones	Gallbladder	胆囊
+score_surgically_absent_gallbladder	Gallbladder	胆囊
+side_gallbladder_gallstones	Gallbladder	胆囊
+finding_splenomegaly	Spleen	脾
+newq_acute_chronic_spleen	Spleen	脾
+newq_compartment_spleen	Spleen	脾
+newq_congenital_variant_spleen	Spleen	脾
+newq_diverticulum_spleen	Spleen	脾
+newq_extent_spleen	Spleen	脾
+newq_gas_pattern_spleen	Spleen	脾
+newq_hernia_site_spleen	Spleen	脾
+newq_macroscopic_fat_spleen	Spleen	脾
+newq_vascular_relation_spleen	Spleen	脾
+newq_wall_change_spleen	Spleen	脾
+organ_spleen	Spleen	脾
+score_splenomegaly	Spleen	脾
+finding_pancreatic_atrophy	Pancreas	胰腺
+newq_acute_chronic_pancreas	Pancreas	胰腺
+newq_compartment_pancreas	Pancreas	胰腺
+newq_congenital_variant_pancreas	Pancreas	胰腺
+newq_diverticulum_pancreas	Pancreas	胰腺
+newq_extent_pancreas	Pancreas	胰腺
+newq_gas_pattern_pancreas	Pancreas	胰腺
+newq_hernia_site_pancreas	Pancreas	胰腺
+newq_macroscopic_fat_pancreas	Pancreas	胰腺
+newq_vascular_relation_pancreas	Pancreas	胰腺
+newq_wall_change_pancreas	Pancreas	胰腺
+organ_pancreas	Pancreas	胰腺
+score_pancreatic_atrophy	Pancreas	胰腺
+side_pancreas_pancreatic_atrophy	Pancreas	胰腺
+newq_acute_chronic_adrenal	Adrenal glands	肾上腺
+newq_compartment_adrenal	Adrenal glands	肾上腺
+newq_congenital_variant_adrenal	Adrenal glands	肾上腺
+newq_diverticulum_adrenal	Adrenal glands	肾上腺
+newq_extent_adrenal	Adrenal glands	肾上腺
+newq_gas_pattern_adrenal	Adrenal glands	肾上腺
+newq_hernia_site_adrenal	Adrenal glands	肾上腺
+newq_macroscopic_fat_adrenal	Adrenal glands	肾上腺
+newq_vascular_relation_adrenal	Adrenal glands	肾上腺
+newq_wall_change_adrenal	Adrenal glands	肾上腺
+finding_hydronephrosis	Kidneys and ureters	肾
+finding_renal_cyst	Kidneys and ureters	肾
+finding_renal_hypodensities	Kidneys and ureters	肾
+newq_acute_chronic_kidneys	Kidneys and ureters	肾
+newq_compartment_kidneys	Kidneys and ureters	肾
+newq_congenital_variant_kidneys	Kidneys and ureters	肾
+newq_diverticulum_kidneys	Kidneys and ureters	肾
+newq_extent_kidneys	Kidneys and ureters	肾
+newq_gas_pattern_kidneys	Kidneys and ureters	肾
+newq_hernia_site_kidneys	Kidneys and ureters	肾
+newq_macroscopic_fat_kidneys	Kidneys and ureters	肾
+newq_vascular_relation_kidneys	Kidneys and ureters	肾
+newq_wall_change_kidneys	Kidneys and ureters	肾
+organ_kidneys	Kidneys and ureters	肾
+score_hydronephrosis	Kidneys and ureters	肾
+score_renal_cyst	Kidneys and ureters	肾
+score_renal_hypodensities	Kidneys and ureters	肾
+side_kidneys_hydronephrosis	Kidneys and ureters	肾
+side_kidneys_renal_cyst	Kidneys and ureters	肾
+side_kidneys_renal_hypodensities	Kidneys and ureters	肾
+finding_appendicitis	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+finding_bowel_obstruction	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+finding_hiatal_hernia	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+finding_submucosal_edema	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_acute_chronic_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_compartment_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_congenital_variant_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_diverticulum_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_extent_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_gas_pattern_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_hernia_site_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_macroscopic_fat_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_vascular_relation_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+newq_wall_change_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+organ_gastrointestinal	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+score_bowel_obstruction	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+score_hiatal_hernia	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+score_submucosal_edema	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+side_gastrointestinal_bowel_obstruction	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+side_gastrointestinal_submucosal_edema	Gastrointestinal tract	食管 胃 小肠 大肠 十二指肠
+finding_lymphadenopathy	Lymph nodes	
+newq_acute_chronic_lymph	Lymph nodes	
+newq_compartment_lymph	Lymph nodes	
+newq_congenital_variant_lymph	Lymph nodes	
+newq_diverticulum_lymph	Lymph nodes	
+newq_extent_lymph	Lymph nodes	
+newq_gas_pattern_lymph	Lymph nodes	
+newq_hernia_site_lymph	Lymph nodes	
+newq_macroscopic_fat_lymph	Lymph nodes	
+newq_vascular_relation_lymph	Lymph nodes	
+newq_wall_change_lymph	Lymph nodes	
+organ_lymph	Lymph nodes	
+score_lymphadenopathy	Lymph nodes	
+side_lymph_lymphadenopathy	Lymph nodes	
+finding_abdominal_aortic_aneurysm	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+finding_atherosclerosis	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+finding_thrombosis	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_acute_chronic_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_compartment_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_congenital_variant_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_diverticulum_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_extent_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_gas_pattern_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_hernia_site_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_macroscopic_fat_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_vascular_relation_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+newq_wall_change_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+organ_vasculature	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+score_abdominal_aortic_aneurysm	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+score_atherosclerosis	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+score_thrombosis	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+side_vasculature_atherosclerosis	Vasculature	主动脉 下腔静脉 髂动脉 髂静脉 门静脉 肺动脉
+finding_anasarca	Peritoneal cavity	
+finding_ascites	Peritoneal cavity	
+finding_free_air	Peritoneal cavity	
+newq_acute_chronic_peritoneal	Peritoneal cavity	
+newq_compartment_peritoneal	Peritoneal cavity	
+newq_congenital_variant_peritoneal	Peritoneal cavity	
+newq_diverticulum_peritoneal	Peritoneal cavity	
+newq_extent_peritoneal	Peritoneal cavity	
+newq_gas_pattern_peritoneal	Peritoneal cavity	
+newq_hernia_site_peritoneal	Peritoneal cavity	
+newq_macroscopic_fat_peritoneal	Peritoneal cavity	
+newq_vascular_relation_peritoneal	Peritoneal cavity	
+newq_wall_change_peritoneal	Peritoneal cavity	
+organ_peritoneal	Peritoneal cavity	
+score_anasarca	Peritoneal cavity	
+score_ascites	Peritoneal cavity	
+score_free_air	Peritoneal cavity	
+side_peritoneal_anasarca	Peritoneal cavity	
+side_peritoneal_ascites	Peritoneal cavity	
+newq_acute_chronic_abdominal	Abdominal wall	
+newq_compartment_abdominal	Abdominal wall	
+newq_congenital_variant_abdominal	Abdominal wall	
+newq_diverticulum_abdominal	Abdominal wall	
+newq_extent_abdominal	Abdominal wall	
+newq_gas_pattern_abdominal	Abdominal wall	
+newq_hernia_site_abdominal	Abdominal wall	
+newq_macroscopic_fat_abdominal	Abdominal wall	
+newq_wall_change_abdominal	Abdominal wall	
+finding_fracture	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+finding_osteopenia	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_acute_chronic_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_compartment_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_congenital_variant_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_diverticulum_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_extent_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_gas_pattern_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_hernia_site_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_macroscopic_fat_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_vascular_relation_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_wall_change_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+organ_musculoskeletal	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+score_fracture	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+score_osteopenia	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+side_musculoskeletal_fracture	Musculoskeletal	竖脊肌 臀肌 髂腰肌 股骨 肱骨 肩胛骨 骶骨 颈椎 腰椎 胸椎 髋关节 锁骨
+newq_acute_chronic_bladder	Bladder	膀胱
+newq_compartment_bladder	Bladder	膀胱
+newq_congenital_variant_bladder	Bladder	膀胱
+newq_diverticulum_bladder	Bladder	膀胱
+newq_extent_bladder	Bladder	膀胱
+newq_gas_pattern_bladder	Bladder	膀胱
+newq_hernia_site_bladder	Bladder	膀胱
+newq_macroscopic_fat_bladder	Bladder	膀胱
+newq_vascular_relation_bladder	Bladder	膀胱
+newq_wall_change_bladder	Bladder	膀胱
+newq_acute_chronic_uterus	Uterus and ovaries	
+newq_compartment_uterus	Uterus and ovaries	
+newq_diverticulum_uterus	Uterus and ovaries	
+newq_extent_uterus	Uterus and ovaries	
+newq_gas_pattern_uterus	Uterus and ovaries	
+newq_macroscopic_fat_uterus	Uterus and ovaries	
+newq_vascular_relation_uterus	Uterus and ovaries	
+finding_prostatomegaly	Prostate and seminal vesicles	
+newq_acute_chronic_prostate	Prostate and seminal vesicles	
+newq_compartment_prostate	Prostate and seminal vesicles	
+newq_congenital_variant_prostate	Prostate and seminal vesicles	
+newq_diverticulum_prostate	Prostate and seminal vesicles	
+newq_extent_prostate	Prostate and seminal vesicles	
+newq_hernia_site_prostate	Prostate and seminal vesicles	
+newq_macroscopic_fat_prostate	Prostate and seminal vesicles	
+newq_vascular_relation_prostate	Prostate and seminal vesicles	
+newq_wall_change_prostate	Prostate and seminal vesicles	
+organ_prostate	Prostate and seminal vesicles	
+score_prostatomegaly	Prostate and seminal vesicles	

@@ -1,0 +1,225 @@
+\section{Details of the Benchmark}
+\label{sec:benchmark-details}
+
+\subsection{Data source and construction}
+The in-distribution (IID) benchmark is built from the source cohort abdominal--pelvic CT
+studies with paired radiology reports. Each study contributes one CT volume
+(\texttt{.nii.gz}) and a free-text report; the report's organ-section prose is the
+source of all labels. A rule-based labeler (\texttt{rule\_v4}) first extracts
+candidate labels, which are then verified by an ensemble of LLM readers
+(\S\ref{sec:verification}). The released benchmark contains
+\textbf{280{,}111 questions over 25{,}270 studies}, partitioned into training,
+validation, and test splits. Questions are answered with a single symbol
+(\texttt{a}/\texttt{b} for yes/no, a letter for multiple choice, or \texttt{1}--\texttt{5}
+for severity), so every item is a closed-form decision rather than free-text
+generation.
+
+\subsection{Task families and question types}
+The benchmark spans six question families (Table~\ref{tab:families}). The
+\emph{finding} family asks whether a specific abnormality is present (binary
+yes/no); the \emph{organ} family asks for the most prominent abnormality of a given
+organ system as a multiple-choice question; the \emph{score} family grades severity
+on an ordinal L0--L4 scale; the \emph{side} family asks laterality; the
+\emph{triage} family asks whether the impression indicates an acute intra-abdominal
+process; and an \emph{extended} family adds report-mined questions (e.g.,
+diverticulosis, bowel-wall change, lesion extent, hernia site, acute-vs-chronic).
+Prognosis and acquisition questions are excluded. By answer format the benchmark
+contains 187{,}189 yes/no, 79{,}711 multiple-choice, and 13{,}211 severity items.
+
+\begin{table}[t]
+\centering
+\caption{Question families in the IID benchmark.}
+\label{tab:families}
+\begin{tabular}{llrl}
+\toprule
+Family & Answer type & Count & Description \\
+\midrule
+Finding   & yes/no        & 174{,}093 & presence of a specific abnormality \\
+Organ     & multiple choice & 60{,}014 & most prominent organ abnormality \\
+Extended  & yes/no + choice & 26{,}553 & report-mined auxiliary questions \\
+Score     & ordinal (L0--L4) & 13{,}211 & severity grading \\
+Triage    & multiple choice & 4{,}997 & acute intra-abdominal process \\
+Side      & multiple choice & 1{,}243 & laterality \\
+\midrule
+Total     &               & 280{,}111 & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Splits and leakage control}
+\label{sec:splits}
+Splits are assigned at the \textbf{study level} and inherited from the source
+cohort's partition. We verify on the released files that the training/validation
+pool and the test set share \textbf{no study and no image volume} (study overlap
+$=0$, image overlap $=0$), so no report or scan is seen in more than one split.
+Table~\ref{tab:splits} gives the per-split composition.
+% NOTE (honesty): patient identifiers are not available, so patient-level grouping
+% cannot be enforced; the source flags patient_leakage_possible=True. The claim above
+% is strictly study/image-level. Do NOT upgrade this to "patient-level" without a
+% patient-id dedup pass.
+
+\begin{table}[t]
+\centering
+\caption{Per-split composition of the IID benchmark.}
+\label{tab:splits}
+\begin{tabular}{lrrrrr}
+\toprule
+Split & Studies & Questions & Yes/No & Choice & Score \\
+\midrule
+Train & 15{,}178 & 168{,}093 & 112{,}322 & 47{,}798 & 7{,}973 \\
+Val   & 5{,}009  & 55{,}175  & 36{,}926  & 15{,}702 & 2{,}547 \\
+Test  & 5{,}080  & 56{,}825  & 37{,}925  & 16{,}210 & 2{,}690 \\
+\midrule
+Total & 25{,}270 & 280{,}111 & 187{,}189 & 79{,}711 & 13{,}211 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Organ and disease coverage}
+Organ questions cover eight organ systems (Table~\ref{tab:organs}); four systems
+whose option set degenerates to a single abnormality (spleen, pancreas, lymph
+nodes, prostate) are removed at release. Finding questions cover \textbf{30
+abnormalities}; Table~\ref{tab:diseases} lists their positive/negative counts.
+Overall the finding family is 37.4\% positive (65{,}184) and 62.6\% negative
+(108{,}893). In the retained organ set, \texttt{no\_abnormality} accounts for
+$\sim$81\% of items, so we down-sample it at release to avoid a trivial
+majority-class baseline.
+
+\begin{table}[t]
+\centering
+\caption{Organ-system distribution (organ family).}
+\label{tab:organs}
+\begin{tabular}{lr}
+\toprule
+Organ system & Count \\
+\midrule
+Liver \& biliary tree      & 12{,}683 \\
+Lower thorax               & 9{,}543 \\
+Gastrointestinal tract     & 8{,}140 \\
+Kidneys \& ureters         & 7{,}842 \\
+Musculoskeletal            & 6{,}981 \\
+Peritoneal cavity          & 6{,}398 \\
+Vasculature                & 5{,}486 \\
+Gallbladder                & 2{,}940 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Finding-family distribution over 30 abnormalities (positive / negative).}
+\label{tab:diseases}
+\begin{tabular}{lrrr}
+\toprule
+Abnormality & Total & Pos & Neg \\
+\midrule
+Gallstones                    & 15{,}085 & 1{,}985 & 13{,}100 \\
+Atelectasis                   & 12{,}271 & 11{,}720 & 551 \\
+Renal hypodensities           & 11{,}929 & 5{,}630 & 6{,}299 \\
+Surgically absent gallbladder & 11{,}689 & 577 & 11{,}112 \\
+Bowel obstruction             & 11{,}297 & 564 & 10{,}733 \\
+Hydronephrosis                & 10{,}615 & 935 & 9{,}680 \\
+Biliary ductal dilation       & 10{,}040 & 2{,}625 & 7{,}415 \\
+Renal cyst                    & 9{,}247 & 8{,}086 & 1{,}161 \\
+Metastatic disease            & 8{,}659 & 792 & 7{,}867 \\
+Anasarca                      & 8{,}409 & 1{,}465 & 6{,}944 \\
+Pleural effusion              & 8{,}160 & 3{,}809 & 4{,}351 \\
+Atherosclerosis               & 7{,}656 & 7{,}264 & 392 \\
+Free air                      & 5{,}997 & 579 & 5{,}418 \\
+Abdominal aortic aneurysm     & 5{,}784 & 219 & 5{,}565 \\
+Hepatic steatosis             & 4{,}898 & 2{,}646 & 2{,}252 \\
+Lymphadenopathy               & 4{,}856 & 979 & 3{,}877 \\
+Ascites                       & 3{,}476 & 2{,}577 & 899 \\
+Fracture                      & 3{,}194 & 1{,}345 & 1{,}849 \\
+Submucosal edema              & 3{,}126 & 1{,}667 & 1{,}459 \\
+Appendicitis                  & 2{,}956 & 133 & 2{,}823 \\
+Pancreatic atrophy            & 2{,}933 & 1{,}695 & 1{,}238 \\
+Cardiomegaly                  & 1{,}868 & 792 & 1{,}076 \\
+Coronary calcification        & 1{,}776 & 1{,}644 & 132 \\
+Hiatal hernia                 & 1{,}690 & 1{,}650 & 40 \\
+Osteopenia                    & 1{,}627 & 1{,}023 & 604 \\
+Splenomegaly                  & 1{,}601 & 876 & 725 \\
+Hepatomegaly                  & 1{,}467 & 425 & 1{,}042 \\
+Thrombosis                    & 869 & 707 & 162 \\
+Prostatomegaly                & 659 & 650 & 9 \\
+Aortic valve calcification    & 243 & 125 & 118 \\
+\midrule
+Total                         & 174{,}077 & 65{,}184 & 108{,}893 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Label verification}
+\label{sec:verification}
+Each candidate label is verified by a \textbf{two-plus-one LLM reader ensemble}.
+Two base readers (Qwen3-32B and Phi-4) independently judge each deduplicated
+report text unit, blind to the rule-derived label. A third reader
+(Qwen3.8-27B) adjudicates only the tied cases that receive exactly one support
+vote. A question is retained only if it obtains \textbf{at least two support votes
+out of three} (a 2-of-3 agreement gate); organ questions are judged by their own
+three-reader vote rather than borrowing the finding verdict.
+
+Implied negatives (``the report does not mention the finding, therefore it is
+absent'') are \emph{also} reviewed by all three readers. Because a direct yes/no
+prompt would be leading, they are re-queried with neutral, non-leading templates
+(neutral-template binding) and judged by the same ensemble under the same 2-of-3
+support gate; on top of that gate, each binding must keep its reader opposition
+rate $\le 20\%$. Recovered items are tagged distinctly
+(\texttt{implied\_negative\_v2}). Labels backed solely by a normal organ section
+(\texttt{organ\_backed\_negative}) are tagged separately and excluded from the
+released finding set.
+
+\paragraph{Filtering yield.}
+The factory produces 733{,}452 candidate questions; the verification gate retains
+395{,}971, i.e., \textbf{46.0\% are dropped}. The main rejection reasons are
+boilerplate-only implied negatives (79{,}551), non-auditable items (73{,}519),
+bindings exceeding the opposition threshold (53{,}775), opposed bindings
+(48{,}126), and reader disagreement (44{,}742). Release assembly then removes
+organ-backed negatives and degenerate organ systems and down-samples
+\texttt{no\_abnormality}, yielding the final 280{,}111 items.
+
+\subsection{Human audit}
+We manually audit a random sample of \textbf{400 retained IID items}
+(seed-fixed). Using the criterion that a label is correct if the evidence supports
+it (or it is the best available multiple-choice option with reader agreement), we
+find \textbf{0 incorrect labels}; 12 items (3.0\%) are flagged as borderline, of
+which 7 reflect organ option-set coverage gaps, 3 mixed/ambiguous evidence, and 2
+borderline reader disagreement. For the out-of-distribution set we audit
+\textbf{200 items}, finding 4 incorrect and 8 borderline.
+
+\subsection{Out-of-distribution evaluation}
+The OOD benchmark is the the external OOD cohort abdominal CT cohort, held out entirely from
+training and used for prediction only (no OOD label enters fitting and no OOD
+readout drives model selection). It comprises \textbf{421 studies and 2{,}807
+questions} (1{,}947 yes/no, 801 choice, 59 score) over 24 abnormalities.
+Table~\ref{tab:oodiid} summarizes the distribution shift relative to IID.
+% NOTE: pin the OOD total before submission (current frozen test = 2,807; earlier
+% versions 2,577 / 2,823 exist).
+
+\begin{table}[t]
+\centering
+\caption{IID vs.\ OOD distribution comparison.}
+\label{tab:oodiid}
+\begin{tabular}{lll}
+\toprule
+ & IID (the source cohort) & OOD (the external OOD cohort) \\
+\midrule
+Source            & the source abdominal CT cohort & the external OOD cohort (external) \\
+Splits            & train / val / test & test only (prediction-only) \\
+Studies           & 25{,}270 & 421 \\
+Questions         & 280{,}111 & 2{,}807 \\
+Abnormalities     & 30 & 24 \\
+Organ systems     & 8 & 8 (incl.\ merged groups) \\
+Answer types      & 187{,}189 / 79{,}711 / 13{,}211 & 1{,}947 / 801 / 59 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The OOD set omits six IID abnormalities---five lower-thorax findings
+(atelectasis, pleural effusion, coronary calcification, aortic valve
+calcification, cardiomegaly) and anasarca---reflecting the external OOD cohort's abdominal focus.
+Disease prevalence also differs markedly: IID is dominated by common/incidental
+findings (gallstones, atelectasis, renal hypodensities), whereas OOD is enriched
+for pathology (lymphadenopathy, ascites, splenomegaly, renal cyst, biliary ductal
+dilation). OOD further uses merged organ groups with whole-image fallback where a
+dedicated organ category is unavailable.
