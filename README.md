@@ -48,8 +48,8 @@ evaluation and calibration code for CT-Verdict (IID + OOD).
 
 ## Updates
 
-- **[2026-11]** Radev-0.8B and Radev-2B checkpoints, the CT-Verdict benchmark, and the training
-  and evaluation code are released.
+- **[2026-11]** The CT-Verdict benchmark and the training and evaluation code are released.
+- **[2026-11]** Radev-0.8B and Radev-2B checkpoints are announced and will be released within one week.
 
 ![Radev framework](assets/framework.png)
 *Framework of Radev (paper Fig. 2). (a) Organ-grounded 3D encoder and query-conditioned 2D
