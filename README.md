@@ -1,7 +1,7 @@
 # Radev: Decision-Native Multimodal Clinical Modeling for 3D CT
 
-[![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Dataset-CT--Verdict-yellow)](https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict)
-[![HF Model](https://img.shields.io/badge/%F0%9F%A4%97%20Models-Radev-yellow)](https://huggingface.co/Gavinnnnnnnn/Radev-2B)
+[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-CT--Verdict%20Dataset-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict)
+[![Hugging Face Models](https://img.shields.io/badge/Hugging%20Face-Radev%20Models-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/Gavinnnnnnnn/Radev-2B)
 
 Radev reads a whole 3D abdominal CT volume together with a clinical question and a small
 candidate set, and emits a **calibrated probability distribution over the candidates in a
@@ -12,11 +12,12 @@ grounding (an organ-bound evidence ledger plus bound 2D evidence tokens) tells t
 This repository contains the published model arm, the three-stage training pipeline, and
 the evaluation/calibration code for the **CT-Verdict** benchmark (IID + OOD).
 
-![Qualitative cases](assets/case_figure.png)
-*Two successes and one failure of Radev-2B against a zero-shot CLIP baseline (Merlin-ZS).
-Red contours mark the question-bound organ. (a) IID: normal gallbladder, baseline hallucinates
-stones. (b) OOD: simple renal cyst, missed by the baseline. (c) IID failure: a visible
-ring-like calculus missed by Radev-2B.*
+![Radev framework](assets/framework.png)
+*Framework of Radev (paper Fig. 2). (a) Organ-grounded 3D encoder and query-conditioned 2D
+evidence fusion feed a single-pass candidate scoring head. (b) Three-stage training
+curriculum: alignment, verdict fine-tuning, counterfactual-calibrated training (CCT).
+(c) CCT ablates target vs. control organ evidence: confidence must drop only when removing
+the target organ breaks the verdict.*
 
 ## Highlights
 
