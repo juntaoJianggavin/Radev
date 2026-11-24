@@ -1,4 +1,4 @@
-# Radev: Decision-Native Multimodal Clinical Modeling for 3D CT
+# Radev: Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration
 
 <p align="center">
     <a href="#"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
