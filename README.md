@@ -32,8 +32,9 @@ the target organ breaks the verdict.*
   ledger; each question binds to its target organs and their 2D evidence slices.
 - **Confidence calibration.** Counterfactual-calibrated training (CCT) ablates the bound
   evidence and penalizes overconfidence when the answer should not change.
-- **CT-Verdict benchmark.** 56,825 IID test questions (binary findings, multiple choice,
-  ordinal severity) and 2,807 OOD questions on external volumes, prediction-only.
+- **CT-Verdict benchmark.** 223,286 training/validation questions and 56,825 IID test questions
+  (binary findings, multiple choice, ordinal severity), plus 2,807 OOD questions on external
+  volumes (prediction-only).
 
 ## Results
 
