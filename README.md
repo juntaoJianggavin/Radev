@@ -261,6 +261,60 @@ loss weights) are documented in the launchers and `python -m radev train --help`
 
 The encoder identity is `radar_ft`; caches built under older identities must be rebuilt.
 
+### Weight download & preparation
+
+**The code never downloads weights automatically.** Every stage loads from local paths
+(`from_pretrained` on a local directory / `.pth` file), and the CCT launcher forces
+`HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1`. Prepare all external weights on disk first;
+if a local path is missing, `transformers` may treat the name as a Hub repo id and try to
+fetch it, which is not the intended workflow.
+
+Expected layout (defaults shown; override with the env vars above):
+
+```
+<repo>/
+├── pretrained/                      # LLM_ROOT
+│   ├── Qwen3.5-0.8B/                # HF-format model dir (config.json, weights, tokenizer)
+│   ├── Qwen3.5-2B/
+│   └── Qwen3.5-9B/
+└── radar_ckpt/                      # RADAR_CKPT_ROOT
+    ├── checkpoint_radar_plus_finetuned.pth   # frozen 3D encoder, identity radar_ft
+    └── infer_text_embedding.pt               # organ text embedding
+```
+
+**1. Language hosts (Qwen3.5 family).** Obtain the official Qwen3.5-{0.8B,2B,9B} base
+checkpoints from the Qwen organization on Hugging Face (<https://huggingface.co/Qwen>)
+and place each as a standard HF model directory under `LLM_ROOT` (default `pretrained/`).
+Download with the matching official repo id, e.g.:
+
+```bash
+pip install -U "huggingface_hub[cli]"
+huggingface-cli download <official-Qwen3.5-2B-repo-id> --local-dir pretrained/Qwen3.5-2B
+# repeat for 0.8B / 9B; or set LLM_ROOT to an existing model directory
+```
+
+Only the sizes you actually run are required (the published arm uses 0.8B and 2B).
+
+**2. Frozen 3D encoder + text embedding (`radar_ft`).** These are external assets, not
+bundled in the model repos and not auto-downloaded. Place them under `RADAR_CKPT_ROOT`
+(default `radar_ckpt/`):
+
+- `checkpoint_radar_plus_finetuned.pth` — the authors' fine-tuned RADAR+ encoder
+  (identity `radar_ft`), released with the paper / on request like the checkpoints.
+  The upstream RADAR architecture is Apache-2.0 (DAMO RADAR); the ported vendor code is
+  under `radev/train/vendor/`.
+- `infer_text_embedding.pt` — the organ text embedding consumed by the encoder.
+
+Verify the encoder file integrity (the engine checks basename + sha256 + tensor count):
+
+```bash
+sha256sum radar_ckpt/checkpoint_radar_plus_finetuned.pth
+# expected: cd5aae5635de3712312c067dd82114cd4c215e7dcfc11eb3619dab73fcceaebc
+```
+
+Paths can also be overridden per-run with `--visual-ckpt` / `--ckpt` / `--text-emb`.
+After the weights are in place, build the organ-feature cache with `GO=1 bash build_features.sh`.
+
 ## Repository layout
 
 ```
