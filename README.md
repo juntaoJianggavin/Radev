@@ -3,7 +3,8 @@
 <p align="center">
     <a href="#"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
     <a href="https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Dataset&color=yellow" alt='HF Dataset'></a>
-    <a href="https://huggingface.co/Gavinnnnnnnn/Radev-2B"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Models&color=yellow" alt='HF Models'></a>
+    <a href="https://huggingface.co/Gavinnnnnnnn/Radev-0.8B"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Radev-0.8B&color=yellow" alt='HF Radev-0.8B'></a>
+    <a href="https://huggingface.co/Gavinnnnnnnn/Radev-2B"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Radev-2B&color=yellow" alt='HF Radev-2B'></a>
     <a href="#"><img src='https://img.shields.io/badge/Radev-Website-green?style=flat&logo=googlechrome&logoColor=green' alt='Radev Website'></a>
 </p>
 
@@ -159,7 +160,7 @@ OOD labels never enter fitting or model selection.
 | Asset | Location |
 |---|---|
 | Benchmark JSON (IID train/val/test, OOD test) | HF dataset [`Gavinnnnnnnn/CT-Verdict`](https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict) |
-| Published checkpoints (0.8B / 2B / 4B) | HF models `Gavinnnnnnnn/Radev-<size>` (access on request) |
+| Published checkpoints (0.8B / 2B) | HF models [`Radev-0.8B`](https://huggingface.co/Gavinnnnnnnn/Radev-0.8B), [`Radev-2B`](https://huggingface.co/Gavinnnnnnnn/Radev-2B) (access on request) |
 | Benchmark documentation & statistics | [`doc/`](doc/) |
 | Question → organ binding | [`organ_map.tsv`](organ_map.tsv) |
 
@@ -214,7 +215,7 @@ loss weights) are documented in the launchers and `python -m radev train --help`
 
 | Asset | Env override | Notes |
 |---|---|---|
-| Language hosts (Qwen3.5 family) | `LLM_ROOT` | `pretrained/Qwen3.5-{0.8B,2B,4B,9B}` |
+| Language hosts (Qwen3.5 family) | `LLM_ROOT` | `pretrained/Qwen3.5-{0.8B,2B,9B}` |
 | Frozen 3D encoder + text embedding | `RADAR_CKPT_ROOT` | `checkpoint_radar_plus_finetuned.pth`, `infer_text_embedding.pt` |
 | Organ-feature / slice caches | `VISUAL_ROOT`, `SLICE_ROOT` | rebuild with `build_features.sh` |
 | CT volumes | `RADEV_IMAGE_ROOT` | see Data preparation |
