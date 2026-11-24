@@ -1,7 +1,11 @@
 # Radev: Decision-Native Multimodal Clinical Modeling for 3D CT
 
-[![Hugging Face Dataset](https://img.shields.io/badge/Hugging%20Face-CT--Verdict%20Dataset-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict)
-[![Hugging Face Models](https://img.shields.io/badge/Hugging%20Face-Radev%20Models-FFD21E?logo=huggingface&logoColor=black)](https://huggingface.co/Gavinnnnnnnn/Radev-2B)
+<p align="center">
+    <a href="#"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
+    <a href="https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Dataset&color=yellow" alt='HF Dataset'></a>
+    <a href="https://huggingface.co/Gavinnnnnnnn/Radev-2B"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Models&color=yellow" alt='HF Models'></a>
+    <a href="#"><img src='https://img.shields.io/badge/Radev-Website-green?style=flat&logo=googlechrome&logoColor=green' alt='Radev Website'></a>
+</p>
 
 Radev reads a whole 3D abdominal CT volume together with a clinical question and a small
 candidate set, and emits a **calibrated probability distribution over the candidates in a
