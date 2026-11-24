@@ -1,4 +1,6 @@
-# Radev: Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration
+<p align="center">
+  <img src="assets/radev_title.png" alt="Radev: Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration" width="820">
+</p>
 
 <p align="center">
     <a href="#"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
@@ -13,12 +15,12 @@
   Wenqi Zhong<sup>*2,3,1</sup> ·
   <a href="https://gyguo.github.io/">Guangyu Guo</a><sup>*2,3,1</sup> ·
   Dexia Chen<sup>2,3</sup> ·
-  Yilong Hu<sup>2,3</sup> ·
+  Yilong Hu<sup>2,3</sup><br>
   <a href="https://scholar.google.com/citations?user=5kJ22ZMAAAAJ">Yunhao Bai</a><sup>2,4</sup> ·
   <a href="https://scholar.google.com/citations?user=yoY2un8AAAAJ">Zhenyu Yi</a><sup>5</sup> ·
   <a href="https://scholar.google.com/citations?user=qirP1UIAAAAJ">Jianwei Xu</a><sup>2,3,1</sup> ·
   <a href="https://cwmok.github.io/">Tony C. W. MOK</a><sup>2,3,1</sup> ·
-  Muxuan Gao<sup>1</sup> ·
+  Muxuan Gao<sup>1</sup><br>
   <a href="https://fabiozhang0722.github.io/">Ling Zhang</a><sup>2</sup> ·
   <a href="https://april.zju.edu.cn/team/dr-yong-liu/">Yong Liu</a><sup>1</sup> ·
   <a href="https://zhangzjn.github.io/">Jiangning Zhang</a><sup>†1</sup> ·
