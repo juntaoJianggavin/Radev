@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <a href="#"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
+    <a href="https://arxiv.org/abs/2611.32993"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
     <a href="https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Dataset&color=yellow" alt='HF Dataset'></a>
     <a href="https://huggingface.co/Gavinnnnnnnn/Radev-0.8B"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Radev-0.8B&color=yellow" alt='HF Radev-0.8B'></a>
     <a href="https://huggingface.co/Gavinnnnnnnn/Radev-2B"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Radev-2B&color=yellow" alt='HF Radev-2B'></a>
