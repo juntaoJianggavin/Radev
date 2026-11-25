@@ -199,7 +199,7 @@ OOD labels never enter fitting or model selection.
 | Asset | Location |
 |---|---|
 | Benchmark JSON (IID train/test, OOD test) | HF dataset [`Gavinnnnnnnn/CT-Verdict`](https://huggingface.co/datasets/Gavinnnnnnnn/CT-Verdict) |
-| Published checkpoints (0.8B / 2B) | HF models [`Radev-0.8B`](https://huggingface.co/Gavinnnnnnnn/Radev-0.8B), [`Radev-2B`](https://huggingface.co/Gavinnnnnnnn/Radev-2B) (access on request) |
+| Published checkpoints (0.8B / 2B) | HF models [`Radev-0.8B`](https://huggingface.co/Gavinnnnnnnn/Radev-0.8B), [`Radev-2B`](https://huggingface.co/Gavinnnnnnnn/Radev-2B) (available soon) |
 | Benchmark documentation & statistics | [`doc/`](doc/) |
 | Question → organ binding | [`organ_map.tsv`](organ_map.tsv) |
 
