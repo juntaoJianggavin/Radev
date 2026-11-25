@@ -281,15 +281,17 @@ Expected layout (defaults shown; override with the env vars above):
     └── infer_text_embedding.pt               # organ text embedding
 ```
 
-**1. Language hosts (Qwen3.5 family).** Obtain the official Qwen3.5-{0.8B,2B} base
-checkpoints from the Qwen organization on Hugging Face (<https://huggingface.co/Qwen>)
-and place each as a standard HF model directory under `LLM_ROOT` (default `pretrained/`).
-Download with the matching official repo id, e.g.:
+**1. Language hosts (Qwen3.5 family).** Obtain the official base checkpoints
+[`Qwen/Qwen3.5-0.8B`](https://huggingface.co/Qwen/Qwen3.5-0.8B) and
+[`Qwen/Qwen3.5-2B`](https://huggingface.co/Qwen/Qwen3.5-2B) from the Qwen organization on
+Hugging Face and place each as a standard HF model directory under `LLM_ROOT` (default
+`pretrained/`). Download with the matching official repo id, e.g.:
 
 ```bash
 pip install -U "huggingface_hub[cli]"
-huggingface-cli download <official-Qwen3.5-2B-repo-id> --local-dir pretrained/Qwen3.5-2B
-# repeat for 0.8B; or set LLM_ROOT to an existing model directory
+huggingface-cli download Qwen/Qwen3.5-2B --local-dir pretrained/Qwen3.5-2B
+huggingface-cli download Qwen/Qwen3.5-0.8B --local-dir pretrained/Qwen3.5-0.8B
+# or set LLM_ROOT to an existing model directory
 ```
 
 Only the sizes you actually run are required (the published arm uses 0.8B and 2B).
@@ -298,10 +300,10 @@ Only the sizes you actually run are required (the published arm uses 0.8B and 2B
 bundled in the model repos and not auto-downloaded. Place them under `RADAR_CKPT_ROOT`
 (default `radar_ckpt/`):
 
-- `checkpoint_radar_plus_finetuned.pth` — the authors' fine-tuned RADAR+ encoder
-  (identity `radar_ft`), released with the paper / on request like the checkpoints.
-  The upstream RADAR architecture is Apache-2.0 (DAMO RADAR); the ported vendor code is
-  under `radev/train/vendor/`.
+- `checkpoint_radar_plus_finetuned.pth` — the RADAR+ encoder (identity `radar_ft`) from
+  the third-party [DAMO RADAR](https://github.com/alibaba-damo-academy/damo-radar) project
+  (Alibaba DAMO Academy); it is not produced by this work. The upstream RADAR architecture
+  is Apache-2.0; the ported vendor code is under `radev/train/vendor/`.
 - `infer_text_embedding.pt` — the organ text embedding consumed by the encoder.
 
 Verify the encoder file integrity (the engine checks basename + sha256 + tensor count):
