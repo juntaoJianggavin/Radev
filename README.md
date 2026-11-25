@@ -333,10 +333,13 @@ geometry_scan.json      per-study organ geometry for the cache planner
 ## Citation
 
 ```bibtex
-@misc{radev2026,
-  title        = {Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration},
-  year         = {2026},
-  howpublished = {GitHub repository},
-  url          = {https://github.com/juntaoJianggavin/Radev}
+@misc{jiang2026decisionnativemultimodalclinicalmodeling,
+      title={Decision-Native Multimodal Clinical Modeling via Anatomical Grounding and Confidence Calibration},
+      author={Juntao Jiang and Wenqi Zhong and Guangyu Guo and Dexia Chen and Yilong Hu and Yunhao Bai and Zhenyu Yi and Jianwei Xu and Tony C. W. Mok and Muxuan Gao and Ling Zhang and Yong Liu and Jiangning Zhang and Zhongwei Qiu},
+      year={2026},
+      eprint={2611.32993},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2611.32993},
 }
 ```
